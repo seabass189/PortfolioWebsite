@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<main role="main">
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>Welcome!</h1>
+      <p class="lead text-muted">Hello! My name is Sebastian and I enjoy
+        creating apps and websites. Below you can find a list of some of the
+        projects I have created.
+      </p>
+      <p>
+        <a href="mailto:sebash189@gmail.com" class="btn btn-primary my-2">Email Me</a>
+        <!-- <a href="#" class="btn btn-secondary my-2">Secondary action</a> -->
+      </p>
+      <img src="{% static 'sebastian.jpg' %}" height="300" alt="A picture of Sebastian Hernandez">
+    </div>
+  </section>
+</main>
+
+<div class="album py-5 bg-light">
+  <div class="container">
+
+    <div class="row">
+      {% for project in projects.all %}
+      <div class="col-md-4">
+        <a href="{% url 'project_view' project.id %}">
+        <div class="card mb-4 shadow-sm">
+          <img class="card-img-top" src="{{ project.image.url }}" alt="Image for {{ project.name }}">
+          <div class="card-body">
+            <p class="card-text"><b>{{ project.name }}</b></p>
+            <p>{{ project.header }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <!-- <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              </div>
+              <small class="text-muted">Test</small> -->
+            </div>
+          </div>
+        </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<br><br><br><br>
+{% endblock %}
