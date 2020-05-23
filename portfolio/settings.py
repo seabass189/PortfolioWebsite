@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = ['sebhernandez.com', 'localhost', 'www.sebhernandez.com', 'https://calm-plateau-58645.herokuapp.com/']
+ALLOWED_HOSTS = ['sebhernandez.com', 'localhost', 'www.sebhernandez.com', 'https://calm-plateau-58645.herokuapp.com/', 'calm-plateau-58645.herokuapp.com']
 
 
 # Application definition
