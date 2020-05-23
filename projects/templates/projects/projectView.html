@@ -6,14 +6,14 @@
   <section class="jumbotron">
     <div class="container text-center">
       <h1 class="text-center">{{ project.name }}</h1><br>
-      <img src="{{ project.image.url }}" width="60%" alt="A picture for {{ project.name }}"><br>
+      <img src="{{ project.image.url }}" width="70%" alt="A picture for {{ project.name }}"><br>
     </div>
     <div class="container text-left">
       <p class="text-left">{{ project.summary|linebreaks }}</p>
     </div>
     <div class="container text-center">
       {% if project.github_link %}
-      <a href="{{ project.github_link }}"><h4>Check this project out on GitHub!</h4></a><br>
+      <a href="{{ project.github_link }}" target="_blank"><h4>Check this project out on GitHub!</h4></a><br>
       {% endif %}
 
       <a href="{% url 'home' %}" class="btn btn-primary my-2">Back</a>
