@@ -8,10 +8,10 @@
       <h1>Welcome!</h1>
       <p class="lead text-muted">Hello! My name is Sebastian and I enjoy
         creating apps and websites. Below you can find a list of some of the
-        projects I have created.
+        projects I have created. I am always updating this website, so come back
+        to view new projects!
       </p>
-      <p>
-        <a href="mailto:sebash189@gmail.com" class="btn btn-primary my-2">Email Me</a>
+      <p><a href="mailto:sebash189@gmail.com" class="btn btn-primary my-2">Email Me</a>
         <!-- <a href="#" class="btn btn-secondary my-2">Secondary action</a> -->
       </p>
       <img src="{% static 'sebastian.jpg' %}" height="300" alt="A picture of Sebastian Hernandez">
@@ -21,13 +21,14 @@
 
 <div class="album py-5 bg-light">
   <div class="container">
-
     <div class="row">
       {% for project in projects.all %}
       <div class="col-md-4">
         <a href="{% url 'project_view' project.id %}">
         <div class="card mb-4 shadow-sm">
-          <img class="card-img-top" src="{{ project.image.url }}" alt="Image for {{ project.name }}">
+          <div id="card-img">
+            <img class="card-img-top" src="{{ project.image.url }}" alt="Image for {{ project.name }}">
+          </div>
           <div class="card-body">
             <p class="card-text"><b>{{ project.name }}</b></p>
             <p>{{ project.header }}</p>
