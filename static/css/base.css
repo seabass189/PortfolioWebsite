@@ -1,24 +1,30 @@
 /* base.html
 ================================================*/
 .base-box {
-  background: #E3170A;
+  background: #827D82;
 }
 .base-box a {
-  font-family: 'Abril Fatface', cursive;
-  background-color: black;
-  color: #E2E2E2; /* white grey */
+  color: black;
+  background-color: #C7C7C7;
   padding: 5px 10px;
   border-radius: 10px;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
 }
 .base-box a:hover {
-  font-weight: bold;
-  text-decoration: none;
-  color: black;
-  background-color: white;
+  background-color: #A6A6A6;
 }
 .base-box h5 a {
-  font-family: 'Nosifer', cursive;
+  /* font-family: cursive; */
   font-size: 150%;
   margin: 0 5px;
+  color: black;
+  border-radius: 0px;
+  background-color: transparent;
+}
+.base-box h5 a:hover {
+  /* font-family: cursive; */
+  font-size: 150%;
+  margin: 0 5px;
+  color: #3F3F3C;
+  background-color: transparent;
 }
