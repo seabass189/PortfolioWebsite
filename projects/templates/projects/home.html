@@ -21,13 +21,14 @@
 
 <div class="album py-5 bg-light">
   <div class="container">
-
     <div class="row">
       {% for project in projects.all %}
       <div class="col-md-4">
         <a href="{% url 'project_view' project.id %}">
         <div class="card mb-4 shadow-sm">
-          <img class="card-img-top" src="{{ project.image.url }}" alt="Image for {{ project.name }}">
+          <div id="card-img">
+            <img class="card-img-top" src="{{ project.image.url }}" alt="Image for {{ project.name }}">
+          </div>
           <div class="card-body">
             <p class="card-text"><b>{{ project.name }}</b></p>
             <p>{{ project.header }}</p>
